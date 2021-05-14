@@ -4,7 +4,7 @@ namespace Sistema_Produtos
 {
     class Program
     {
-        static int tamanhoArrays = 2;
+        static int tamanhoArrays = 10;
         static string[] nome = new string[tamanhoArrays];
         static float[] preco = new float[tamanhoArrays];
         static bool[] promocao = new bool[tamanhoArrays];
@@ -22,7 +22,7 @@ namespace Sistema_Produtos
                 switch (opcao)
                 {
                     case "1":
-                        Console.WriteLine("Cadastre seus produtos; Máximo de 10 produtos");
+                        Console.WriteLine($"Cadastre seus produtos; Máximo de {tamanhoArrays} produtos");
 
                         novoCadastro = true;
 
