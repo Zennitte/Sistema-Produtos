@@ -98,7 +98,7 @@ namespace Sistema_Produtos
         {
             for (var i = 0; i < c; i++)
             {
-                Console.WriteLine($"{i + 1}° produto; {nome[i]} / R${preco[i]} / Está em promoção: {(promocao[i] ? "Sim" : "Não")} ");
+                Console.WriteLine($"{i + 1}° produto; {nome[i]} / R${preco[i]} / {(promocao[i] ? "Está em Promoção" : "Não Está em Promoção")} ");
             }
             Console.WriteLine();
         }
