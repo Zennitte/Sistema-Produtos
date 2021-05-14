@@ -48,7 +48,9 @@ namespace Sistema_Produtos
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.WriteLine(@"
             1 - Cadastrar Produto
-            2 - Listar Produto");
+            2 - Listar Produto
+            
+            Aperte Qualquer Botão Para Sair");
         }
         static void Cadastrar()
         {
