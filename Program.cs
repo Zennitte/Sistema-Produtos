@@ -31,6 +31,9 @@ namespace Sistema_Produtos
                     case "2":
                         Listar();
                         break;
+                    case "3":
+                    AumentarArray();
+                        break;
                     default:
                         Console.WriteLine("Adeus");
                         menuPrincipal = false;
@@ -49,6 +52,7 @@ namespace Sistema_Produtos
             Console.WriteLine(@"
             1 - Cadastrar Produto
             2 - Listar Produto
+            3 - Aumentar Número de Cadastros
             
             Aperte Qualquer Botão Para Sair");
         }
@@ -103,6 +107,16 @@ namespace Sistema_Produtos
                 Console.WriteLine($"{i + 1}° produto; {nome[i]} / R${preco[i]} / {(promocao[i] ? "Está em Promoção" : "Não Está em Promoção")} ");
             }
             Console.WriteLine();
+        }
+
+        static void AumentarArray()
+        {
+            Console.WriteLine("Deseja mudar para qual tamanho?");
+            int novoTamanho = int.Parse(Console.ReadLine());
+            tamanhoArrays = novoTamanho;
+            Array.Resize(ref nome, tamanhoArrays);
+            Array.Resize(ref preco, tamanhoArrays);
+            Array.Resize(ref promocao, tamanhoArrays);
         }
     }
 }
